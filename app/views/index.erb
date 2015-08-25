@@ -1,5 +1,23 @@
-<h1>All Tasks</h1>
+<!DOCTYPE html>
+<html lang = 'en'>
+  <head>
+    <title>Index</title>
+    <link rel = 'stylesheet' href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  </head>
 
-<% @tasks.each do |task| %>
-  <h3><%= task.id %>: <a href = "/tasks/<%= task.id %>"><%= task.title%></a></h3>
-  <% end %>
+  <body class = 'container'>
+    <div class = 'row well'>
+      <h1>All Tasks</h1>
+    </div>
+    <div class = 'row'>
+      <% @tasks.each do |task| %>
+        <div class = 'text-center col-md-3' >
+          <div class = 'well'>
+            <h3><%= task.id %>: <a href = "/tasks/<%= task.id %>"><%= task.title%></a></h3>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+  </body>
+</html>
